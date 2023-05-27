@@ -1,0 +1,39 @@
+body {
+  color: white;
+}
+
+.container {
+  display: grid;
+  gap: 10px 20px;
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header     header    header    header"
+    "article    article   .         aside"
+    "footer     footer    footer    aside"; */
+  grid-template:
+    "header     header    header    header" 50px
+    "article    article   .         aside" auto
+    "footer     footer    footer    aside" 50px / 1fr 1fr 50px 1fr;
+    /* grid-template также принимает только gtr / gtc */
+}
+.container > * {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+header {
+  grid-area: header;
+  background-color: darkgreen;
+}
+article {
+  grid-area: article;
+  background-color: black;
+}
+aside {
+  grid-area: aside;
+  background-color: maroon;
+}
+footer {
+  grid-area: footer;
+  background-color: darkblue;
+}
