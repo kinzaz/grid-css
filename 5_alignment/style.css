@@ -1,0 +1,41 @@
+body {
+  color: white;
+}
+
+.container {
+  display: grid;
+  gap: 10px 20px;
+  width: 700px;
+  height: 1000px;
+  grid-template: 500px 300px / 100px 350px 100px;
+  border: 1px solid black;
+
+  /* justify-items: center; start | end | center | stretch  */
+  /* align-items: center; */
+  /* place-items: end start; */
+
+  /* justify-content: space-between; */
+  /* align-content: center; */
+  place-content: center space-between;
+}
+
+.container > * {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+header {
+  background-color: darkgreen;
+}
+article {
+  background-color: black;
+}
+aside {
+  background-color: maroon;
+  /* align-self: end;
+  justify-self: end; */
+  place-self: end;
+}
+footer {
+  background-color: darkblue;
+}
